@@ -76,12 +76,12 @@
 
         }
         return new String(password);
-    }
+        }
 
     // Set the mailbox capacity
     public void setMailboxCapacity(int capacity) {
     this.mailboxCapacity = capacity;
-}
+    }
 
 
 
@@ -105,4 +105,4 @@
                 "\nMAILBOX CAPACITY: " + mailboxCapacity + " emails";
 
     }
-}
+    }
