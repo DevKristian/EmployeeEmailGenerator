@@ -104,5 +104,5 @@
                 "\nCOMPANY EMAIL: " + email +
                 "\nMAILBOX CAPACITY: " + mailboxCapacity + " emails";
 
-    }
+        }
     }
