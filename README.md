@@ -10,8 +10,8 @@
         Email em1 = new Email("FirstNAME", "LastNAME");
         System.out.println(em1.showInfo());
 
+        }
     }
-}
 
 
     /////////// seperate folder
@@ -20,50 +20,50 @@
     package EmailApp;
     import java.util.Scanner;
 
-    public class Email {
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String department;
-    private String email;
-    private int mailboxCapacity = 1000;
-    private int defaultPasswordLength = 10;
-    private String alternateEmail;
-    private String companySuffix = "google.com";
+        public class Email {
+        private String firstName;
+        private String lastName;
+        private String password;
+        private String department;
+        private String email;
+        private int mailboxCapacity = 1000;
+        private int defaultPasswordLength = 10;
+        private String alternateEmail;
+        private String companySuffix = "google.com";
 
     // Constructor to receive the first name and last name
-    public Email(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        public Email(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
 
         // Call a method asking for the department - return the department
-        this.department = setDepartment();
+           this.department = setDepartment();
 
         // Call a method that returns a random password
-        this.password = randomPassword(defaultPasswordLength);
-        System.out.println("Your password is: " + this.password);
+            this.password = randomPassword(defaultPasswordLength);
+            System.out.println("Your password is: " + this.password);
 
         // Combine elements that combine emails
-        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
+            email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
 
-    }
-
-    // Ask for department
-    private String setDepartment() {
-        System.out.print("New worker: " + firstName + ". Department Codes:\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
-        Scanner in = new Scanner(System.in);
-        int depChoice = in.nextInt();
-        if (depChoice == 1) {
-            return "sales";
-        } else if (depChoice == 2) {
-            return "dev";
-        } else if (depChoice == 3) {
-            return "acct";
-        } else {
-            return "";
         }
 
-    }
+    // Ask for department
+            private String setDepartment() {
+            System.out.print("New worker: " + firstName + ". Department Codes:\n1 for Sales\n2 for Development\n3 for                     Accounting\n0 for none\nEnter department code: ");
+            Scanner in = new Scanner(System.in);
+            int depChoice = in.nextInt();
+                if (depChoice == 1) {
+                return "sales";
+                } else if (depChoice == 2) {
+                return "dev";
+                } else if (depChoice == 3) {
+                return "acct";
+                } else {
+                return "";
+            }
+
+        }
 
 
     // Generate a random password
